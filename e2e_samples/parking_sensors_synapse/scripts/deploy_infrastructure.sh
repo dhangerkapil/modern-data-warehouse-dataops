@@ -57,7 +57,7 @@ az group create --name "$resource_group_name" --location "$AZURE_LOCATION" --tag
 
 # By default, set all KeyVault permission to deployer
 # Retrieve KeyVault User Id
-kv_owner_object_id=$(az ad signed-in-user show --output json | jq -r '.id')
+kv_owner_object_id=$(az ad signed-in-user show --output json | jq -r '.objectId')
 
 
 # Validate arm template
